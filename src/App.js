@@ -10,6 +10,7 @@ const App = () => {
   return (
     <AppProvider>
       <div className="App pl-4 pr-4 pt-4">
+        <h1>Film</h1>
         <Filter />
         <Table />
         <ModalUpdate />
