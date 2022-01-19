@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Filter from "./components/Filter";
+import ModalUpdate from "./components/ModalUpdate";
+import ModalView from "./components/ModalView";
+import Table from "./components/Table";
+import { AppProvider } from "./context/AppContext";
+// import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <div className="App pl-4 pr-4 pt-4">
+        <Filter />
+        <Table />
+        <ModalUpdate />
+        <ModalView />
+      </div>
+    </AppProvider>
   );
-}
+};
 
 export default App;
